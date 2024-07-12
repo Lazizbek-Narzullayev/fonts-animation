@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #010718;
+    overflow: hidden;
+}
+.container{
+    width: 320px;
+    overflow: hidden;
+}
+.container .text{
+    position: relative;
+    color: yellow;
+    font-size: 30px;
+    font-weight: 600;
+}
+.container .first-text{
+    color: #fff;
+}
+link{
+    color: #fff;
+    font-size: 50px;
+}
+.text .sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #010718;
+    border-left: 3px solid yellow;
+    animation: animate 4s steps(13) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0;
+    }
+}
